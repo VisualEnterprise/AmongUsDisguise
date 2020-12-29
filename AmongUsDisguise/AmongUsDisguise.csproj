@@ -5,4 +5,8 @@
     <RootNamespace>cc.ts13.AmongUsDisguise</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Impostor.Api" Version="1.2.2-ci.121" />
+  </ItemGroup>
+
 </Project>

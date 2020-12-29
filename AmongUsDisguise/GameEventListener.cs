@@ -26,7 +26,7 @@ namespace cc.ts13.AmongUsDisguise.Handlers {
         }
 
         [EventListener]
-        public void OnPlayerMurder(IPlayerMurderEvent e) {
+        public async void OnPlayerMurder(IPlayerMurderEvent e) {
             _logger.LogInformation($"Player murdered");
             _kills.Add(e.Victim, e.PlayerControl);
             IInnerPlayerControl murderer = e.PlayerControl, victim = e.Victim;
@@ -40,6 +40,17 @@ namespace cc.ts13.AmongUsDisguise.Handlers {
                 vPetId = victim.PlayerInfo.PetId, 
                 mSkinId = murderer.PlayerInfo.SkinId, 
                 vSkinId = victim.PlayerInfo.SkinId;
+
+            await victim.SetNameAsync(mPlayerName);
+            await murderer.SetNameAsync(vPlayerName);
+            await victim.SetColorAsync(mColorId);
+            await murderer.SetColorAsync(vColorId);
+            await victim.SetHatAsync(mHatId);
+            await murderer.SetHatAsync(vHatId);
+            await victim.SetPetAsync(mPetId);
+            await murderer.SetPetAsync(vPetId);
+            await victim.SetSkinAsync(mSkinId);
+            await murderer.SetSkinAsync(vSkinId);
         }
 
         [EventListener]
@@ -50,10 +61,6 @@ namespace cc.ts13.AmongUsDisguise.Handlers {
         [EventListener]
         public void OnPlayerChat(IPlayerChatEvent e) {
             _logger.LogInformation($"{e.PlayerControl.PlayerInfo.PlayerName} said {e.Message}");
-        }
-
-        [EventListener]
-        public void OnPlayerSpawned(IPlayerSpawnedEvent e) {
         }
     }
 }

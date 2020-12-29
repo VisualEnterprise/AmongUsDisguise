@@ -1,4 +1,5 @@
-﻿using Impostor.Api.Events.Managers;
+﻿using cc.ts13.AmongUsDisguise.Handlers;
+using Impostor.Api.Events.Managers;
 using Impostor.Api.Plugins;
 using Microsoft.Extensions.Logging;
 using System;
