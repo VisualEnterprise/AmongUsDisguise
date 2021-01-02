@@ -1,5 +1,7 @@
 # AmongUsDisguise
 
+![.NET](https://github.com/VisualEnterprise/AmongUsDisguise/workflows/.NET/badge.svg)
+
 Mod that gives the impostor to the identity of the person he murders.
 
 Created for the [Impostor](https://github.com/Impostor/Impostor) Among Us Server.
