@@ -1,17 +1,17 @@
-﻿using cc.ts13.AmongUsDisguise.Handlers;
+﻿using org.visualenterprise.AmongUsDisguise.Handlers;
 using Impostor.Api.Events.Managers;
 using Impostor.Api.Plugins;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace cc.ts13.AmongUsDisguise {
+namespace org.visualenterprise.AmongUsDisguise {
 
     [ImpostorPlugin(
-        package: "cc.ts13.AmongUsDisguise",
+        package: "org.visualenterprise.AmongUsDisguise",
         name: "AmongUsDisguise",
         author: "Siebs",
-        version: "1.0.0")]
+        version: "1.0.1")]
     public class Disguise : PluginBase {
 
         private readonly ILogger<Disguise> _logger;

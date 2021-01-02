@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cc.ts13.AmongUsDisguise.Handlers {
+namespace org.visualenterprise.AmongUsDisguise.Handlers {
     class GameEventListener : IEventListener {
 
         private readonly ILogger<Disguise> _logger;
