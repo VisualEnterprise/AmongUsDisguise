@@ -11,7 +11,7 @@ namespace org.visualenterprise.AmongUsDisguise {
         package: "org.visualenterprise.AmongUsDisguise",
         name: "AmongUsDisguise",
         author: "Siebs",
-        version: "1.0.1")]
+        version: "1.0.2")]
     public class Disguise : PluginBase {
 
         private readonly ILogger<Disguise> _logger;
