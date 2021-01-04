@@ -13,11 +13,9 @@ namespace org.visualenterprise.AmongUsDisguise.Handlers {
     class GameEventListener : IEventListener {
 
         private readonly ILogger<Disguise> _logger;
-        private Dictionary<IInnerPlayerControl, IInnerPlayerControl> _kills;
 
         public GameEventListener(ILogger<Disguise> logger) {
             _logger = logger;
-            _kills = new Dictionary<IInnerPlayerControl, IInnerPlayerControl>();
         }
 
         [EventListener]
@@ -28,7 +26,6 @@ namespace org.visualenterprise.AmongUsDisguise.Handlers {
         [EventListener]
         public async void OnPlayerMurder(IPlayerMurderEvent e) {
             _logger.LogInformation($"Player murdered");
-            _kills.Add(e.Victim, e.PlayerControl);
             IInnerPlayerControl murderer = e.PlayerControl, victim = e.Victim;
             string mPlayerName = murderer.PlayerInfo.PlayerName, 
                 vPlayerName = victim.PlayerInfo.PlayerName;
