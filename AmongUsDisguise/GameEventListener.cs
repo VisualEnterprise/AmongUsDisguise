@@ -96,10 +96,5 @@ namespace org.visualenterprise.AmongUsDisguise.Handlers {
         public void OnGameEnd(IGameEndedEvent e) {
             _logger.LogInformation($"Game has ended.");
         }
-
-        [EventListener]
-        public void OnPlayerChat(IPlayerChatEvent e) {
-            _logger.LogInformation($"{e.PlayerControl.PlayerInfo.PlayerName} said {e.Message}");
-        }
     }
 }
