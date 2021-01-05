@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <RootNamespace>org.visualenterprise.AmongUsDisguise</RootNamespace>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Authors>Siebs</Authors>
     <Company>Visual Enterprise</Company>
   </PropertyGroup>
