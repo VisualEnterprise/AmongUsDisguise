@@ -11,7 +11,7 @@ namespace org.visualenterprise.AmongUsDisguise {
         package: "org.visualenterprise.AmongUsDisguise",
         name: "AmongUsDisguise",
         author: "Siebs",
-        version: "1.1.0")]
+        version: "1.1.1")]
     public class Disguise : PluginBase {
 
         private readonly ILogger<Disguise> _logger;
@@ -24,13 +24,13 @@ namespace org.visualenterprise.AmongUsDisguise {
         }
 
         public override ValueTask EnableAsync() {
-            _logger.LogInformation("Detective is being enabled");
+            _logger.LogInformation("Disguise is being enabled");
             _unregister = _eventManager.RegisterListener(new GameEventListener(_logger));
             return default;
         }
 
         public override ValueTask DisableAsync() {
-            _logger.LogInformation("Detective is being disabled");
+            _logger.LogInformation("Disguise is being disabled");
             _unregister.Dispose();
             return default;
         }
